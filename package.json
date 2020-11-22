@@ -4,9 +4,9 @@
   "displayName": "Addressables support for Advanced Scene Manager.",
   "description": "Adds support for addressables in Advanced Scene Manager.",
   "keywords": [],
-  "dependencies": [
-    "com.unity.addressables": "1.0.0"
-  ],
+  "dependencies": {
+    "com.unity.addressables": "1.0.0",
+ },
   "author": {
     "name": "Advanced Scene Manager"
   }
