@@ -1,7 +1,7 @@
 {
   "name": "support.advanced-scene-manager.addressables",
   "version": "1.0.0",
-  "displayName": "ASM Support: Addressables.",
+  "displayName": "ASM Support: Addressables",
   "description": "Adds support for addressables in Advanced Scene Manager.",
   "keywords": [],
   "dependencies": {
