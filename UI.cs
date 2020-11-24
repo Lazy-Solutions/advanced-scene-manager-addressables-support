@@ -190,7 +190,7 @@ namespace AdvancedSceneManager.Support._Addressables
         }
 
         static void RefreshButton(SceneCollection collection) =>
-            RefreshButton(buttons.GetValue(collection), IsEnabled(collection.scenes.Select(s => s.path).ToArray()));
+            RefreshButton(buttons.GetValue(collection), IsEnabled(collections.Any() && collection.scenes.Select(s => s.path).ToArray()));
 
         static void RefreshButton(Scene scene) =>
             RefreshButton(buttons.GetValue(scene), scene && IsEnabled(scene.path));
