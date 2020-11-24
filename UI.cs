@@ -47,6 +47,8 @@ namespace AdvancedSceneManager.Support._Addressables
 
         static bool IsEnabled(string[] paths)
         {
+            if (!paths.Any())
+                return false;
             var entries = settings.groups.SelectMany(g => g.entries?.Where(e => paths.Contains(e.AssetPath)));
             return paths.All(path => entries.Any(e => e.AssetPath == path));
         }
@@ -190,7 +192,7 @@ namespace AdvancedSceneManager.Support._Addressables
         }
 
         static void RefreshButton(SceneCollection collection) =>
-            RefreshButton(buttons.GetValue(collection), IsEnabled(collection.scenes.Any() && collection.scenes.Select(s => s.path).ToArray()));
+            RefreshButton(buttons.GetValue(collection), IsEnabled(collection.scenes.Select(s => s.path).ToArray()));
 
         static void RefreshButton(Scene scene) =>
             RefreshButton(buttons.GetValue(scene), scene && IsEnabled(scene.path));
